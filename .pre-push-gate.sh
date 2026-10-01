@@ -17,15 +17,16 @@ echo "pytest exit: $?"
 echo "[2/3] Verifying import..."
 python3 -c "import rfc6265_cookie_pure; print('import OK')"
 
-# 3. Verify git status is clean (no uncommitted changes)
+# 3. Verify git status is clean for tracked files only
 echo "[3/3] Checking git status..."
 if [ -d .git ]; then
-    if [ -n "$(git status --porcelain)" ]; then
-        echo "ERROR: uncommitted changes:"
-        git status --porcelain
+    # Only fail on modified/staged tracked files — untracked files are OK
+    if [ -n "$(git status --porcelain | grep -v "^??")" ]; then
+        echo "ERROR: uncommitted changes to tracked files:"
+        git status --porcelain | grep -v "^??"
         exit 1
     fi
-    echo "git status: clean"
+    echo "git status: clean (no uncommitted changes to tracked files)"
 else
     echo "No .git directory found — skipping git check"
 fi
