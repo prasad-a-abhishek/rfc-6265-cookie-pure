@@ -35,16 +35,16 @@ assert header.startswith("session=abc123; Path=/; SameSite=Strict")
 
 | workload | library | mean_ms | p50_ms | p95_ms | peak_mb | speedup |
 |---|---|---|---|---|---|---|
-| parse_set_cookie_simple | rfc6265-cookie-pure | 30.808 | 30.739 | 31.529 | 0.437 |  |
-| parse_set_cookie_simple | http.cookiejar | 29.011 | 28.923 | 29.723 | 0.003 | 1.0x |
-| parse_set_cookie_mixed | rfc6265-cookie-pure | 38.76 | 38.704 | 39.531 | 0.482 |  |
-| parse_set_cookie_mixed | http.cookiejar | 31.249 | 30.924 | 32.849 | 0.003 | 1.0x |
-| parse_set_cookie_long_value | rfc6265-cookie-pure | 590.748 | 591.825 | 595.769 | 1.095 |  |
-| parse_set_cookie_long_value | http.cookiejar | 56.183 | 56.115 | 57.49 | 0.004 | 1.0x |
-| build_set_cookie_full | rfc6265-cookie-pure | 3.208 | 3.211 | 3.24 | 0.09 |  |
-| build_set_cookie_full | http.cookiejar | 13.748 | 13.719 | 14.226 | 0.002 | 4.3x |
-| round_trip | rfc6265-cookie-pure | 38.207 | 38.229 | 38.619 | 0.002 |  |
-| round_trip | http.cookiejar | 31.551 | 31.48 | 32.157 | 0.003 | 1.0x |
+| parse_set_cookie_simple | rfc6265-cookie-pure | 31.224 | 31.077 | 32.192 | 0.437 |  |
+| parse_set_cookie_simple | http.cookiejar | 29.621 | 29.553 | 30.18 | 0.003 | 1.0x |
+| parse_set_cookie_mixed | rfc6265-cookie-pure | 39.111 | 39.02 | 39.824 | 0.482 |  |
+| parse_set_cookie_mixed | http.cookiejar | 31.291 | 31.254 | 31.808 | 0.003 | 1.0x |
+| parse_set_cookie_long_value | rfc6265-cookie-pure | 596.646 | 596.18 | 605.071 | 1.095 |  |
+| parse_set_cookie_long_value | http.cookiejar | 57.548 | 57.67 | 58.24 | 0.004 | 1.0x |
+| build_set_cookie_full | rfc6265-cookie-pure | 3.219 | 3.206 | 3.308 | 0.09 |  |
+| build_set_cookie_full | http.cookiejar | 13.818 | 13.821 | 14.035 | 0.002 | 4.3x |
+| round_trip | rfc6265-cookie-pure | 38.495 | 38.437 | 39.042 | 0.002 |  |
+| round_trip | http.cookiejar | 31.889 | 31.807 | 32.525 | 0.003 | 1.0x |
 
 > Full benchmark details in `benchmarks/BENCHMARK.md`. Run locally: `python3 benchmarks/run_benchmark.py`
 
