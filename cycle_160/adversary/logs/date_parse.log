@@ -1,0 +1,14 @@
+INFO: Instrumenting rfc6265_cookie_pure
+INFO: Instrumenting datetime
+INFO: Using built-in libfuzzer
+WARNING: Failed to find function "__sanitizer_acquire_crash_state".
+WARNING: Failed to find function "__sanitizer_print_stack_trace".
+WARNING: Failed to find function "__sanitizer_set_death_callback".
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 116079558
+INFO:       53 files found in /root/projects/rfc-6265-cookie-pure/.worktrees/t_cycle160-adversary-01/cycle_160/adversary/corpus/date_parse
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4110 bytes
+INFO: seed corpus: files: 53 min: 1b max: 4110b total: 12041b rss: 42Mb
+#54	INITED cov: 2 ft: 2 corp: 1/1b exec/s: 0 rss: 42Mb
+#50000	DONE   cov: 2 ft: 2 corp: 1/1b lim: 493 exec/s: 0 rss: 42Mb
+Done 50000 runs in 0 second(s)

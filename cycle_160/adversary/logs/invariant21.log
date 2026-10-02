@@ -1,0 +1,20 @@
+INFO: Instrumenting rfc6265_cookie_pure
+INFO: Instrumenting datetime
+INFO: Using built-in libfuzzer
+WARNING: Failed to find function "__sanitizer_acquire_crash_state".
+WARNING: Failed to find function "__sanitizer_print_stack_trace".
+WARNING: Failed to find function "__sanitizer_set_death_callback".
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 4168359477
+INFO:       54 files found in /root/projects/rfc-6265-cookie-pure/.worktrees/t_cycle160-adversary-01/cycle_160/adversary/corpus/invariant21
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 54 min: 1b max: 5b total: 119b rss: 42Mb
+#55	INITED cov: 7 ft: 7 corp: 5/9b exec/s: 0 rss: 42Mb
+#62	REDUCE cov: 7 ft: 7 corp: 5/8b lim: 4 exec/s: 0 rss: 42Mb L: 1/2 MS: 2 ChangeBit-EraseBytes-
+#70	NEW    cov: 8 ft: 8 corp: 6/10b lim: 4 exec/s: 0 rss: 42Mb L: 2/2 MS: 3 EraseBytes-ChangeByte-InsertByte-
+#91	NEW    cov: 9 ft: 9 corp: 7/14b lim: 4 exec/s: 0 rss: 42Mb L: 4/4 MS: 1 CrossOver-
+#198	REDUCE cov: 9 ft: 9 corp: 7/13b lim: 4 exec/s: 0 rss: 42Mb L: 3/3 MS: 2 CopyPart-EraseBytes-
+#311	REDUCE cov: 9 ft: 9 corp: 7/12b lim: 4 exec/s: 0 rss: 42Mb L: 2/2 MS: 3 CrossOver-ChangeBit-EraseBytes-
+#688	REDUCE cov: 9 ft: 9 corp: 7/11b lim: 6 exec/s: 0 rss: 42Mb L: 1/2 MS: 2 ChangeBit-EraseBytes-
+#50000	DONE   cov: 9 ft: 9 corp: 7/11b lim: 493 exec/s: 0 rss: 42Mb
+Done 50000 runs in 0 second(s)
