@@ -64,7 +64,7 @@ Python's stdlib `http.cookiejar` is coupled to `urllib.request`, making it unusa
 - **Full attribute support**: Domain, Path, Expires, Max-Age, Secure, HttpOnly, SameSite (Strict/Lax/None)
 - **sane-cookie-date parser** — RFC 6265 Appendix D / RFC 5322 date format
 - **Token validation** — cookie names validated against RFC 2616 token grammar
-- **121 tests** — 100% pytest pass rate, covering all spec ACs + edge/boundary/invalid cases
+- **122 tests** — 100% pytest pass rate, covering all spec ACs + edge/boundary/invalid cases
 
 ## API Reference
 
