@@ -128,4 +128,6 @@ Result: SECRETS_SCAN_CLEAN — no credentials or tokens found.
 
 ---
 
+tests_passing: true
+
 VERDICT: SHIP
